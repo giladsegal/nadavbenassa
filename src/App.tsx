@@ -11,13 +11,14 @@ import {
 } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Patient } from "./pages/Patient";
+import { BedStatus } from "./types";
 
 export type AppProps = {
   createStore: CreateStore;
 };
 
 function App({ createStore }: AppProps) {
-  const beds = useBeds(createStore);
+  const [beds, updateBed] = useBeds(createStore);
 
   return (
     <div className={styles["app"]}>
@@ -34,11 +35,13 @@ function App({ createStore }: AppProps) {
             render={({ match }) => {
               const bedId = match.params.bedId;
 
-              const requestHelp = () => {
-                console.log(bedId);
+              const { name } = beds.find((b) => b.id === bedId) || { name: "" };
+
+              const requestHelp = (status: BedStatus) => {
+                updateBed?.(bedId, { status });
               };
 
-              return <Patient requestHelp={requestHelp} />;
+              return <Patient requestHelp={requestHelp} name={name} />;
             }}
           />
           <Route path="/">

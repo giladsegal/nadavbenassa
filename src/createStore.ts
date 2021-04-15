@@ -19,6 +19,11 @@ export type CreateStore = () => {
   ) => {
     unsubscribe: StoreCleanup;
   };
+  update: <T extends { id: string }>(
+    collection: string,
+    id: string,
+    payload: Partial<Omit<T, "id">>
+  ) => Promise<void>;
 };
 
 export type StoreError = firebase.firestore.FirestoreError;
@@ -51,6 +56,9 @@ export const createStore: CreateStore = () => {
       }, onError);
 
       return { unsubscribe };
+    },
+    update: (collection, id, payload) => {
+      return db.collection(collection).doc(id).update(payload);
     },
   };
 };

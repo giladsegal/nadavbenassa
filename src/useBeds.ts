@@ -2,11 +2,22 @@ import React from "react";
 import { CreateStore } from "./createStore";
 import { Bed } from "./types";
 
-export function useBeds(createStore: CreateStore) {
+export type UpdateBed = (
+  id: string,
+  payload: Partial<Omit<Bed, "id">>
+) => Promise<void>;
+
+export function useBeds(
+  createStore: CreateStore
+): [Bed[], UpdateBed | undefined] {
   const [beds, setBeds] = React.useState<Bed[]>([]);
+  const updateBed = React.useRef<UpdateBed>();
 
   React.useEffect(() => {
     const store = createStore();
+    updateBed.current = (id: string, payload: Partial<Omit<Bed, "id">>) => {
+      return store.update("beds", id, payload);
+    };
 
     const { unsubscribe } = store.subscribe<Bed>("beds", {
       onAdd: (bed) => {
@@ -33,8 +44,11 @@ export function useBeds(createStore: CreateStore) {
       onError: (e) => console.log(e),
     });
 
-    return unsubscribe;
+    return () => {
+      unsubscribe();
+      updateBed.current = undefined;
+    };
   }, [createStore]);
 
-  return beds;
+  return [beds, updateBed.current];
 }

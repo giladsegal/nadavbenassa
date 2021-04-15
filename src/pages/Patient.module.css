@@ -1,0 +1,11 @@
+.requests-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  grid-auto-rows: 100px;
+  font-size: 40px;
+}
+
+.request {
+  font-size: 40px;
+}
