@@ -10,6 +10,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
+import { Patient } from "./pages/Patient";
 
 export type AppProps = {
   createStore: CreateStore;
@@ -27,7 +28,19 @@ function App({ createStore }: AppProps) {
             render={() => {
               return <Dashboard beds={beds} />;
             }}
-          ></Route>
+          />
+          <Route
+            path="/patient/:bedId"
+            render={({ match }) => {
+              const bedId = match.params.bedId;
+
+              const requestHelp = () => {
+                console.log(bedId);
+              };
+
+              return <Patient requestHelp={requestHelp} />;
+            }}
+          />
           <Route path="/">
             <Redirect to="/dashboard" />
           </Route>
