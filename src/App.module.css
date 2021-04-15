@@ -4,10 +4,3 @@
   margin: 0 auto;
   padding: 10px;
 }
-
-.beds-layout {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 100px;
-  gap: 5px;
-}
