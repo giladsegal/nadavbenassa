@@ -3,27 +3,14 @@ import styles from "./App.module.css";
 import "./global.css";
 import { Bed } from "./Bed";
 import { CreateStore } from "./createStore";
-import { Bed as BedData } from "./types";
+import { useBeds } from "./useBeds";
 
 export type AppProps = {
   createStore: CreateStore;
 };
 
 function App({ createStore }: AppProps) {
-  const [beds, setBeds] = React.useState<BedData[]>([]);
-
-  React.useEffect(() => {
-    const store = createStore();
-
-    store.subscribe<BedData>("beds", {
-      onAdd: (bed) => {
-        setBeds((prevBeds) => {
-          return [...prevBeds, bed];
-        });
-      },
-      onError: (e) => console.log(e),
-    });
-  }, [createStore]);
+  const beds = useBeds(createStore);
 
   return (
     <div className={styles["app"]}>
