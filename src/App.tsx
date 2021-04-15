@@ -1,26 +1,29 @@
 import React from "react";
 import styles from "./App.module.css";
 import "./global.css";
-import { Bed as BedData, DataService } from "./dataService";
 import { Bed } from "./Bed";
+import { CreateStore } from "./createStore";
+import { Bed as BedData } from "./types";
 
 export type AppProps = {
-  dataService: DataService;
+  createStore: CreateStore;
 };
 
-function App({ dataService }: AppProps) {
+function App({ createStore }: AppProps) {
   const [beds, setBeds] = React.useState<BedData[]>([]);
 
   React.useEffect(() => {
-    const fetchBeds = async function fetchBeds() {
-      const _beds = await dataService.getBeds();
-      setBeds(_beds);
-    };
+    const store = createStore();
 
-    fetchBeds();
-  }, [dataService]);
-
-  console.log(styles);
+    store.subscribe<BedData>("beds", {
+      onAdd: (bed) => {
+        setBeds((prevBeds) => {
+          return [...prevBeds, bed];
+        });
+      },
+      onError: (e) => console.log(e),
+    });
+  }, [createStore]);
 
   return (
     <div className={styles["app"]}>

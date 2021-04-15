@@ -1,4 +1,4 @@
-import { Bed as BedData } from "./dataService";
+import { Bed as BedData } from "./types";
 import styles from "./Bed.module.css";
 
 export type BedProps = BedData;

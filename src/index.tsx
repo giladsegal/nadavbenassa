@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createDataService } from "./dataService";
+import { createStore } from "./createStore";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App dataService={createDataService()} />
+    <App createStore={createStore} />
   </React.StrictMode>,
   document.getElementById("root")
 );
