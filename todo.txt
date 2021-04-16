@@ -1,3 +1,14 @@
-authentication
-a11y
-translations (hebrew/english/arabic/russian)
+specs:
+  authentication
+  a11y
+  translations (hebrew/english/arabic/russian) (before/after login)
+  add 2 home screen
+  logout
+  4 beds per room
+  status bar for patient (request sent / request seen by staff)
+
+
+tasks:
+  generate 25 rooms, 4 beds per room, send links to nadav
+  deploy cloud
+  set budget limits

@@ -9,9 +9,11 @@ const statusToEmoji: Record<
   BedStatus,
   { image: string; description: string }
 > = {
-  food: { image: "🍟", description: "food" },
   none: { image: "", description: "none" },
+  food: { image: "🍟", description: "food" },
   shower: { image: "🚿", description: "shower" },
+  pain: { image: "💊", description: "pain" },
+  general: { image: "❓", description: "medical assistance" },
 };
 
 export function Emoji({ status }: EmojiProps) {

@@ -27,7 +27,13 @@ function App({ createStore }: AppProps) {
           <Route
             path="/dashboard"
             render={() => {
-              return <Dashboard beds={beds} />;
+              const updateBedStatus = (bedId: string, status: BedStatus) => {
+                updateBed?.(bedId, { status });
+              };
+
+              return (
+                <Dashboard beds={beds} updateBedStatus={updateBedStatus} />
+              );
             }}
           />
           <Route
@@ -35,13 +41,22 @@ function App({ createStore }: AppProps) {
             render={({ match }) => {
               const bedId = match.params.bedId;
 
-              const { name } = beds.find((b) => b.id === bedId) || { name: "" };
+              const { name, status } = beds.find((b) => b.id === bedId) || {
+                name: "",
+                status: "none",
+              };
 
               const requestHelp = (status: BedStatus) => {
                 updateBed?.(bedId, { status });
               };
 
-              return <Patient requestHelp={requestHelp} name={name} />;
+              return (
+                <Patient
+                  name={name}
+                  status={status}
+                  onStatusChange={requestHelp}
+                />
+              );
             }}
           />
           <Route path="/">

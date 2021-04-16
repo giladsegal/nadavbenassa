@@ -13,7 +13,7 @@
   text-align: center;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  background: #aaa;
+  background: #555;
   font-weight: bold;
 }
 
@@ -22,4 +22,9 @@
   place-items: center center;
   flex: 1;
   font-size: 40px;
+}
+
+.selected,
+.selected .name {
+  border-color: lightgreen;
 }
