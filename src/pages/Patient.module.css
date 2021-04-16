@@ -1,7 +1,7 @@
 .requests-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5px;
+  gap: 10px;
   grid-auto-rows: 100px;
   font-size: 40px;
 }
@@ -16,5 +16,19 @@
 }
 
 .request-selected {
-  background: darkgreen;
+  background: #4caf50 !important;
+}
+
+.status-image {
+  font-size: 40px;
+  line-height: 40px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.status-description {
+  font-size: 20px;
+  text-transform: none;
+  line-height: 20px;
+  padding-top: 5px;
 }

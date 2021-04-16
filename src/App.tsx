@@ -13,58 +13,71 @@ import { Dashboard } from "./pages/Dashboard";
 import { Patient } from "./pages/Patient";
 import { BedStatus } from "./types";
 
+import { ThemeProvider } from "@material-ui/styles";
+
+import { CssBaseline, createMuiTheme } from "@material-ui/core";
+
 export type AppProps = {
   createStore: CreateStore;
 };
+
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
+  },
+});
 
 function App({ createStore }: AppProps) {
   const [beds, updateBed] = useBeds(createStore);
 
   return (
-    <div className={styles["app"]}>
-      <Router>
-        <Switch>
-          <Route
-            path="/dashboard"
-            render={() => {
-              const updateBedStatus = (bedId: string, status: BedStatus) => {
-                updateBed?.(bedId, { status });
-              };
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className={styles["app"]}>
+        <Router>
+          <Switch>
+            <Route
+              path="/dashboard"
+              render={() => {
+                const updateBedStatus = (bedId: string, status: BedStatus) => {
+                  updateBed?.(bedId, { status });
+                };
 
-              return (
-                <Dashboard beds={beds} updateBedStatus={updateBedStatus} />
-              );
-            }}
-          />
-          <Route
-            path="/patient/:bedId"
-            render={({ match }) => {
-              const bedId = match.params.bedId;
+                return (
+                  <Dashboard beds={beds} updateBedStatus={updateBedStatus} />
+                );
+              }}
+            />
+            <Route
+              path="/patient/:bedId"
+              render={({ match }) => {
+                const bedId = match.params.bedId;
 
-              const { name, status } = beds.find((b) => b.id === bedId) || {
-                name: "",
-                status: "none",
-              };
+                const { name, status } = beds.find((b) => b.id === bedId) || {
+                  name: "",
+                  status: "none",
+                };
 
-              const requestHelp = (status: BedStatus) => {
-                updateBed?.(bedId, { status });
-              };
+                const requestHelp = (status: BedStatus) => {
+                  updateBed?.(bedId, { status });
+                };
 
-              return (
-                <Patient
-                  name={name}
-                  status={status}
-                  onStatusChange={requestHelp}
-                />
-              );
-            }}
-          />
-          <Route path="/">
-            <Redirect to="/dashboard" />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+                return (
+                  <Patient
+                    name={name}
+                    status={status}
+                    onStatusChange={requestHelp}
+                  />
+                );
+              }}
+            />
+            <Route path="/">
+              <Redirect to="/dashboard" />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </ThemeProvider>
   );
 }
 

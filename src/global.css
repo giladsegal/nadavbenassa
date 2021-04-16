@@ -4,14 +4,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  font-size: 14px;
+  /*font-size: 14px;
   font-family: "Helvetica";
   min-width: 320px;
   margin: 0;
   padding: 0;
 
   color: #eee;
-  background: #333;
+  background: #333;*/
+  padding-bottom: 75px;
 }
 
 *,

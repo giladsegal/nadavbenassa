@@ -6,7 +6,7 @@ specs:
   logout
   4 beds per room
   status bar for patient (request sent / request seen by staff)
-
+  force logout
 
 tasks:
   generate 25 rooms, 4 beds per room, send links to nadav
