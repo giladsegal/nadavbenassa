@@ -10,6 +10,7 @@ import patient_en from "./translations/en/patient.json";
 import dashboard_en from "./translations/en/dashboard.json";
 import patient_he from "./translations/he/patient.json";
 import dashboard_he from "./translations/he/dashboard.json";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -29,6 +30,8 @@ i18next.init({
 i18next.on("languageChanged", function (lng) {
   document.dir = lng === "he" ? "rtl" : "ltr";
 });
+
+serviceWorkerRegistration.register();
 
 ReactDOM.render(
   <React.StrictMode>

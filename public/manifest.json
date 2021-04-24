@@ -1,8 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
+  "background_color": "#ffffff",
+  "description": "Images of foxes",
+  "display": "fullscreen",
+  "icons": [{
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
+  "name": "Create React App Sample",
+  "short_name": "React App",
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#000000"
 }

@@ -9,6 +9,7 @@ specs:
   a11y
 
 tasks:
+  https
   generate 25 rooms, 4 beds per room, send links to nadav
   deploy cloud
   set budget limits
