@@ -11,46 +11,27 @@ export type DashboardProps = {
 };
 
 const groupByRoom = (beds: BedData[]) => {
-  const room1: BedData[] = [];
-  const room2: BedData[] = [];
+  const grouped = beds.reduce<BedData[][]>((agg, curr) => {
+    const roomIdx = curr.roomId - 1;
+    agg[roomIdx] = agg[roomIdx] || [];
+    agg[roomIdx].push(curr);
 
-  beds.forEach((b) => {
-    b.roomId === "1" ? room1.push(b) : room2.push(b);
+    return agg;
+  }, []);
+
+  grouped.forEach((room) => {
+    room.sort((b1, b2) => b1.order - b2.order);
   });
 
-  return [room1, room2];
+  return grouped;
 };
 
 export function Dashboard({ beds, updateBedStatus }: DashboardProps) {
-  const rooms = groupByRoom(beds);
-  const { t } = useTranslation("dashboard");
+  const rooms = React.useMemo(() => {
+    return groupByRoom(beds);
+  }, [beds]);
 
-  const rooms_copy = [
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[0],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-    rooms[1],
-  ];
+  const { t } = useTranslation("dashboard");
 
   return (
     <div>
@@ -65,7 +46,7 @@ export function Dashboard({ beds, updateBedStatus }: DashboardProps) {
         {t("title")}
       </Typography>
       <div className={styles["beds-layout"]}>
-        {rooms_copy.map((room: BedData[], idx: number) => {
+        {rooms.map((room: BedData[], idx: number) => {
           return (
             <div className={styles.room} key={idx + 1}>
               <span style={{}} className={styles["room-name"]}>

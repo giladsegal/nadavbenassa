@@ -1,0 +1,149 @@
+Room Number 1
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/5K9rMPViLyDCb8hhDkb9
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/kmd546opWS787YKEwhKt
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/9HPMnYTvQDk3YKPxxISx
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/4PtpffJ6GLI0BBfdHG7u
+
+Room Number 2
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/kRjTlc9qLeM1doZF3446
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/6EbwQUuVC5iq22hsgVUd
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/JtrQAtfvQkc4LsrxXTkr
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/38t0xW2J9jGvcqpI2ziN
+
+Room Number 3
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/3Ygi9etwHEQ6Mxmmt6C9
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/YALsnwW2lMOQJxNC709x
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/OfzJE9xGJp9MeqQzbHve
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/JMj1ywso0QIB3Nmo4rvd
+
+Room Number 4
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/2VKfxTi6dDpX8BsWYw2v
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/7hLH5YSjQLD5zrFA1Kav
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/1j8Mend9XNP5a1erhqxZ
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/KkVCXyzHHlGx3z4DLQfj
+
+Room Number 5
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/m5LrseIImgB3MJWfYie7
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/w4nfly7sGEHUi0Sucy7z
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/x8n3OXpzdQJLiKMaPAym
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/ktMP3R1bl69Viim8bw1E
+
+Room Number 6
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/WJV8Oe2WdN22k463NGIH
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/Dav0zwlX72z1THivQkUg
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/u2HxJsLw9zcrk37LYGes
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/wLTeURG1Ak4r0eLhZ3GM
+
+Room Number 7
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/enmYjXJjNXRVxqJXacpU
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/rNme5TUxoIoHd6mFMuM4
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/NfTD2TnFAkMr0KaaCSQh
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/60K5ACyO2mwjHkl7EZjN
+
+Room Number 8
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/25a3yA3UgxOwdDltapqH
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/dmzw1dJZS6tZXQnBJtFi
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/XtiNmHzoMDZzRYDsmMax
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/Ugo4vwAmVWi7c4Q9T1ZW
+
+Room Number 9
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/3Evwpipj2yg59y3prPWa
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/3oudXo6rZ0Hhv1kLZwT8
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/FinmONxK8EsYHjEnphWJ
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/L0iQvJVc7J2PCFhtmXdx
+
+Room Number 10
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/quzNGCruurS44uxpsdHw
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/Nngd192n9QZOjFTwCMaH
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/O3Ta0c8cmF9dMD01jvM5
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/jRLF6urei8jvkHRJqAT6
+
+Room Number 11
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/aHF2syJeXk4ZAttQpBE0
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/9IyuRxTlCKkizg4DeMbQ
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/f0K3rGLvr3dUd0xZ0mhL
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/CTGUNLQPHUbDUVdZEmtM
+
+Room Number 12
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/crILuC2urWjcHpb84VQV
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/8kRwbfG13JKPT56LC4GG
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/YZhz8gyjxfG453kljKUa
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/a1lv8cylJxKOv9DOGWQt
+
+Room Number 13
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/AQuWHHrRkXHyNwvKPSOR
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/NPqstQFXY7xWliMbEih5
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/dKzZe5bqBZVSjjlJX5IT
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/CpBh99O0EoQsjAVjKFyH
+
+Room Number 14
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/30Z8y1tCxMF8UeZNppgC
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/u7RPs0hn6VBe04lfajAb
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/W90VqEnssgP3wBH73VLk
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/XcZpF6SkqV3BZQNo28hN
+
+Room Number 15
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/Clym3o65g4OiRmJAgWZY
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/QhsYEXQvOx214JVpVnIV
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/gK5QMVMZXBvcuKVNAEqM
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/Lghs6jaqC5C468HRrkYV
+
+Room Number 16
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/li9zT4ueanwhpIfDWjSD
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/IU12IegQawvhnjK9smMb
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/29Pj330sgsJxL4kgdShB
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/hZtLDbSIREdBvFCtNzSq
+
+Room Number 17
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/mqNVHrO6zye5itmWTtfD
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/fGhy1SQZalswVcDoEBzZ
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/SkwwtVi5Iq1sCYnUNKpx
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/K1rKIr2Ggp5QUS06QjhA
+
+Room Number 18
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/o36Ls1pzDBx52xj2g3J0
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/tnWuSq9wxbXwqeZc8NUV
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/jpnq6gFuksZTgClxKvyw
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/bCrljXSdbyR38q34YNrw
+
+Room Number 19
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/fPQ8ToOUlvTbOYSZQFhP
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/Yh9sfZ6u9gP2Uo0dUFp9
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/4GDOMbK0vyyOfghfCSzU
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/aFXhpadICGUIIbTt5gCi
+
+Room Number 20
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/5blyjnIEwGxpjYDyqt4p
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/KUAf02LuQLfsl33H7iWC
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/uOxsHH2UVhYTu9JJRTQP
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/THoSkVCL2fcu126n7xxc
+
+Room Number 21
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/KLUO5nb6HcSGMgbE6GzV
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/QnwSk83R1sz5rRRNCEqE
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/RsoWh7O9kYG13Vl773AF
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/Kh86fLiSDWf5un4Dqu9q
+
+Room Number 22
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/fA2bPxIfM1xqkf0ApGFk
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/tKdblssOYOo6vp0cwgbg
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/ql5HHJLCgfl1USLAVNud
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/25F6eDzamupiaka1ws7W
+
+Room Number 23
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/Et07mVbjppNpzFFUog8R
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/UIlhEymBvRbT9IcDa85q
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/tU5gnts5HT3EI5W7Zywu
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/wYmiXTCyKIdhfQwSu2TO
+
+Room Number 24
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/eJVES5esNmtq0YpFNmoK
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/BJ9NbjO32s65KS6VJrcX
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/0JZai1qlfbwinU7p9urt
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/wcpB2Bc030xu0hRnm3eZ
+
+Room Number 25
+	Bed Number 1 - https://nadavbenassa.netlify.app/patient/ud9XzMwNp9LoL2OG3lYs
+	Bed Number 2 - https://nadavbenassa.netlify.app/patient/7iFGlMUOEKE2nebUz8Ms
+	Bed Number 3 - https://nadavbenassa.netlify.app/patient/cvpdSpK2BbNK0tEkIGXe
+	Bed Number 4 - https://nadavbenassa.netlify.app/patient/TG36L0MNbv2OhL1R12Da

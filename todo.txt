@@ -1,5 +1,4 @@
 specs:
-  deploy to cloud w/ build
   authentication
   logout
   add 2 home screen
@@ -9,7 +8,5 @@ specs:
   a11y
 
 tasks:
-  https
-  generate 25 rooms, 4 beds per room, send links to nadav
   deploy cloud
   set budget limits

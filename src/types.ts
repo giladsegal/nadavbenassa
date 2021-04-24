@@ -2,7 +2,8 @@ export type Bed = {
   id: string;
   name: string;
   status: BedStatus;
-  roomId: string;
+  roomId: number;
+  order: number;
 };
 
 export type BedStatus = "general" | "pain" | "food" | "shower" | "none";
