@@ -1,0 +1,21 @@
+{
+  "bed_name": "מיטה {{number}}",
+  "choose_language": "בחר שפה",
+  "languages": {
+    "en": "אנגלית",
+    "he": "עברית",
+    "ru": "רוסית",
+    "ar": "ערבית"
+  },
+  "logout": "התנתק",
+  "status": {
+    "hungry": "רעב",
+    "toilet": "שירותים",
+    "general": "כללי",
+    "pain": "כאב"
+  },
+  "cancel_request": "בטל בקשה",
+  "request_status": {
+    "sent": "בקשה נשלחה לצוות"
+  }
+}

@@ -1,13 +1,13 @@
 .beds-layout {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 100px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 250px;
   gap: 20px;
 }
 
 .room {
   display: grid;
-  grid-template-rows: auto 100px 100px;
+  grid-template-rows: 30px 100px 100px;
   grid-template-columns: 100px 100px;
   grid-gap: 5px;
 }
@@ -19,6 +19,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-size: 20px;
-  grid-column: "span 2";
-  text-align: "center";
+  grid-column: span 2;
+  text-align: center;
+  font-weight: 700;
 }

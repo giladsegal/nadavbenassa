@@ -1,12 +1,12 @@
 specs:
+  deploy to cloud w/ build
   authentication
-  a11y
-  translations (hebrew/english/arabic/russian) (before/after login)
-  add 2 home screen
   logout
-  4 beds per room
+  add 2 home screen
   status bar for patient (request sent / request seen by staff)
   force logout
+  no mail, simple authentication (https://github.com/firebase/functions-samples/blob/Node-8/username-password-auth/functions/index.js)
+  a11y
 
 tasks:
   generate 25 rooms, 4 beds per room, send links to nadav

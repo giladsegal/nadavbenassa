@@ -1,0 +1,21 @@
+{
+  "bed_name": "Bed {{number}}",
+  "choose_language": "Choose language",
+  "languages": {
+    "en": "English",
+    "he": "Hebrew",
+    "ru": "Russian",
+    "ar": "Arabic"
+  },
+  "logout": "Logout",
+  "status": {
+    "hungry": "Hungry",
+    "toilet": "Toilet",
+    "general": "General",
+    "pain": "Pain"
+  },
+  "cancel_request": "Cancel request",
+  "request_status": {
+    "sent": "Request sent to staff"
+  }
+}

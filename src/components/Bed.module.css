@@ -27,4 +27,5 @@
 .selected,
 .selected .name {
   border-color: lightgreen;
+  border-width: 5px;
 }
