@@ -1,7 +1,6 @@
 specs:
   add to home screen default route should be to the patient page (bug)
-  default hebrew
-  
+  add 2 home doesn't work 
   ------
   authentication (choose language before login)
   logout

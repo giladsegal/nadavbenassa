@@ -44,6 +44,7 @@ i18next.init({
 
 i18next.on("languageChanged", function (lng) {
   document.dir = lng === "he" ? "rtl" : "ltr";
+  document.documentElement.lang = lng;
 });
 
 serviceWorkerRegistration.register();
