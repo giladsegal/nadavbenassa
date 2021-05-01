@@ -17,5 +17,8 @@
   "cancel_request": "Cancel request",
   "request_status": {
     "sent": "Request sent to staff"
-  }
+  },
+  "add_to_home_screen_button": "Add to home screen",
+  "added_to_home_screen": "App added to home screen"
+
 }

@@ -13,21 +13,22 @@ import { Dashboard } from "./pages/Dashboard";
 import { Patient } from "./pages/Patient";
 import { BedStatus } from "./types";
 
-import { ThemeProvider } from "@material-ui/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
 
 import { CssBaseline, createMuiTheme } from "@material-ui/core";
 
 export type AppProps = {
   createStore: CreateStore;
+  promptPwaInstallion: (() => Promise<boolean>) | undefined;
 };
 
 const theme = createMuiTheme({
   palette: {
-    type: "dark",
+    type: "light",
   },
 });
 
-function App({ createStore }: AppProps) {
+function App({ createStore, promptPwaInstallion }: AppProps) {
   const [beds, updateBed] = useBeds(createStore);
 
   return (
@@ -67,6 +68,7 @@ function App({ createStore }: AppProps) {
                     name={name}
                     status={status}
                     onStatusChange={requestHelp}
+                    promptPwaInstallation={promptPwaInstallion}
                   />
                 );
               }}

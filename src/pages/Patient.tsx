@@ -8,18 +8,28 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Snackbar from "@material-ui/core/Snackbar";
+// import Typography from "@material-ui/core/Typography";
 import { useTranslation } from "react-i18next";
+import Alert from "@material-ui/lab/Alert";
 
 export type PatientProps = {
   name: string;
   status: BedStatus;
   onStatusChange: (status: BedStatus) => void;
+  promptPwaInstallation: (() => Promise<boolean>) | undefined;
 };
 
-export function Patient({ name, onStatusChange, status }: PatientProps) {
+export function Patient({
+  name,
+  onStatusChange,
+  status,
+  promptPwaInstallation,
+}: PatientProps) {
   const { t, i18n } = useTranslation("patient");
   const [language, setLanguage] = React.useState("en");
+
+  const [isPwaToastOpen, setPwaToastOpen] = React.useState(false);
 
   const onLanguageChange = (ev: any) => {
     const lang = ev.target.value;
@@ -34,6 +44,14 @@ export function Patient({ name, onStatusChange, status }: PatientProps) {
     } else {
       onStatusChange(statusToUpdate);
     }
+  };
+
+  const onAddToHomeScreenClick = () => {
+    promptPwaInstallation?.().then((accepted) => {
+      if (accepted) {
+        setPwaToastOpen(true);
+      }
+    });
   };
 
   return (
@@ -122,6 +140,7 @@ export function Patient({ name, onStatusChange, status }: PatientProps) {
           display: "flex",
           justifyContent: "flex-end",
           marginTop: "15px",
+          marginBottom: "10px",
         }}
       >
         <Button
@@ -132,7 +151,32 @@ export function Patient({ name, onStatusChange, status }: PatientProps) {
           {t("cancel_request")}
         </Button>
       </div>
-      {status !== "none" && (
+      <div style={{ marginBottom: "15px" }}>
+        {promptPwaInstallation && (
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={onAddToHomeScreenClick}
+          >
+            {t("add_to_home_screen_button")}
+          </Button>
+        )}
+        <Snackbar
+          open={isPwaToastOpen}
+          onClose={() => setPwaToastOpen(false)}
+          autoHideDuration={6000}
+        >
+          <Alert
+            elevation={6}
+            variant="filled"
+            severity="success"
+            onClose={() => setPwaToastOpen(false)}
+          >
+            {t("added_to_home_screen")}
+          </Alert>
+        </Snackbar>
+      </div>
+      {/* {status !== "none" && (
         <div
           style={{
             position: "fixed",
@@ -146,7 +190,7 @@ export function Patient({ name, onStatusChange, status }: PatientProps) {
         >
           <Typography variant="h5">{t("request_status.sent")}</Typography>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

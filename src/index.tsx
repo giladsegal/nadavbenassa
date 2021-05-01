@@ -12,6 +12,21 @@ import patient_he from "./translations/he/patient.json";
 import dashboard_he from "./translations/he/dashboard.json";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[];
+  readonly userChoice: Promise<{
+    outcome: "accepted" | "dismissed";
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
+}
+
+declare global {
+  interface WindowEventMap {
+    beforeinstallprompt: BeforeInstallPromptEvent;
+  }
+}
+
 i18next.init({
   interpolation: { escapeValue: false },
   lng: "en",
@@ -33,10 +48,26 @@ i18next.on("languageChanged", function (lng) {
 
 serviceWorkerRegistration.register();
 
+let pwaInstallCallback: (() => Promise<boolean>) | undefined = undefined;
+
+if (typeof window !== "undefined") {
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+
+    pwaInstallCallback = () => {
+      e.prompt();
+      return e.userChoice.then(({ outcome }) => {
+        return outcome === "accepted";
+      });
+    };
+  });
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
-      <App createStore={createStore} />
+      <App createStore={createStore} promptPwaInstallion={pwaInstallCallback} />
     </I18nextProvider>
   </React.StrictMode>,
   document.getElementById("root")

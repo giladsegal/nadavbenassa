@@ -17,5 +17,7 @@
   "cancel_request": "בטל בקשה",
   "request_status": {
     "sent": "בקשה נשלחה לצוות"
-  }
+  },
+  "add_to_home_screen": "הוסף למסך הבית",
+  "added_to_home_screen": "אפליקציה הוספה למסך הבית "
 }
