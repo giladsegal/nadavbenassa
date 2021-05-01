@@ -1,5 +1,5 @@
 specs:
-  authentication
+  authentication (choose language before login)
   logout
   add 2 home screen
   status bar for patient (request sent / request seen by staff)

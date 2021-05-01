@@ -31,7 +31,11 @@ export function Dashboard({ beds, updateBedStatus }: DashboardProps) {
     return groupByRoom(beds);
   }, [beds]);
 
-  const { t } = useTranslation("dashboard");
+  const { t, i18n } = useTranslation("dashboard");
+
+  React.useEffect(() => {
+    i18n.changeLanguage("he");
+  }, [i18n]);
 
   return (
     <div>
