@@ -29,9 +29,9 @@ export type CreateStore = () => {
 export type StoreError = firebase.firestore.FirestoreError;
 
 export type StoreHandlers<T extends {}> = {
-  onAdd: (entity: T) => void;
-  onModify: (entity: T) => void;
-  onDelete: (entity: T) => void;
+  onAdd: (entity: T[]) => void;
+  onModify: (entity: T[]) => void;
+  onDelete: (entity: T[]) => void;
   onError: (error: StoreError) => void;
 };
 
@@ -41,18 +41,26 @@ export const createStore: CreateStore = () => {
   return {
     subscribe: (collection, { onAdd, onModify, onDelete, onError }) => {
       const unsubscribe = db.collection(collection).onSnapshot((snapshot) => {
+        const added: any[] = [];
+        const modified: any[] = [];
+        const removed: any[] = [];
+
         snapshot.docChanges().forEach((change) => {
           const data = { id: change.doc.id, ...change.doc.data() } as any;
           if (change.type === "added") {
-            onAdd?.(data);
+            added.push(data);
           }
           if (change.type === "modified") {
-            onModify?.(data);
+            modified.push(data);
           }
           if (change.type === "removed") {
-            onDelete?.(data);
+            removed.push(data);
           }
         });
+
+        added.length && onAdd?.(added);
+        modified.length && onModify?.(modified);
+        removed.length && onDelete?.(removed);
       }, onError);
 
       return { unsubscribe };

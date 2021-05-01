@@ -20,24 +20,28 @@ export function useBeds(
     };
 
     const { unsubscribe } = store.subscribe<Bed>("beds", {
-      onAdd: (bed) => {
+      onAdd: (beds) => {
         setBeds((prevBeds) => {
-          return [...prevBeds, bed];
+          return [...prevBeds, ...beds];
         });
       },
-      onModify: (bed: Bed) => {
+      onModify: (beds) => {
         setBeds((prevBeds) => {
-          const bedToReplaceIdx = prevBeds.findIndex((b) => b.id === bed.id);
           const newBeds = [...prevBeds];
-          newBeds.splice(bedToReplaceIdx, 1, bed);
+          beds.forEach((bed) => {
+            const bedToReplaceIdx = prevBeds.findIndex((b) => b.id === bed.id);
+            newBeds.splice(bedToReplaceIdx, 1, bed);
+          });
           return newBeds;
         });
       },
-      onDelete: (bed: Bed) => {
+      onDelete: (beds) => {
         setBeds((prevBeds) => {
-          const bedToReplaceIdx = prevBeds.findIndex((b) => b.id === bed.id);
           const newBeds = [...prevBeds];
-          newBeds.splice(bedToReplaceIdx, 1);
+          beds.forEach((bed) => {
+            const bedToReplaceIdx = prevBeds.findIndex((b) => b.id === bed.id);
+            newBeds.splice(bedToReplaceIdx, 1);
+          });
           return newBeds;
         });
       },
