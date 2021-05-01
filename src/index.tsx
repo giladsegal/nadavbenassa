@@ -29,7 +29,7 @@ declare global {
 
 i18next.init({
   interpolation: { escapeValue: false },
-  lng: "en",
+  lng: "he",
   resources: {
     en: {
       dashboard: dashboard_en,
